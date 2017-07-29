@@ -1,0 +1,17 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+<a href="{{ path('hwi_oauth_service_redirect', {'service': 'facebook' }) }}">Se connecter Via Facebook</a>
+<br>
+<a href="{{ path('hwi_oauth_service_redirect', {'service': 'google' }) }}">Se connecter Via Google+</a>
+
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        // Handle facebook callback
+        if (window.location.hash && window.location.hash == '#_=_') {
+            window.location.hash = '';
+        }
+    </script>
+{% endblock %}

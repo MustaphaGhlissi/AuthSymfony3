@@ -1,0 +1,22 @@
+connect:
+    resource: "@ConnectBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+    prefix:   /user
+
+hwi_oauth_connect:
+    resource: "@HWIOAuthBundle/Resources/config/routing/connect.xml"
+    prefix: /login
+
+hwi_oauth_redirect:
+    resource: "@HWIOAuthBundle/Resources/config/routing/redirect.xml"
+    prefix:   /login
+
+facebook_login:
+    path: /login/check-facebook
+
+google_login:
+    path: /login/check-google
